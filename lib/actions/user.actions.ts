@@ -100,7 +100,7 @@ export const getCurrentUser = async () => {
     const result = await account.get();
 
     const user = await databases.listDocuments(
-      appwriteConfig.databaseId,
+      appwriteConfig.databaseId, 
       appwriteConfig.usersCollectionId,
       [Query.equal("accountId", result.$id)],
     );
